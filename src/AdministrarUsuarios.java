@@ -187,7 +187,7 @@ public class AdministrarUsuarios extends javax.swing.JInternalFrame {
         String contrasenia = txtContrasenia.getText();
         String tipoUsuario = comboTipoUsuario.getSelectedItem().toString();
         
-        String sql = "UPDATE usuario SET nombre = '"+nombre+"',cedula = '"+cedula+"',contrasenia = '"+contrasenia+"',tipo_usuario = '"+tipoUsuario+"' WHERE cedula = '"+cedula+"'";
+        String sql = "UPDATE usuario SET nombre = '"+nombre+"',contrasenia = MD5('"+contrasenia+"'),tipo_usuario = '"+tipoUsuario+"' WHERE cedula = '"+cedula+"'";
         
         
         conectar conect = new conectar();
@@ -303,17 +303,7 @@ public class AdministrarUsuarios extends javax.swing.JInternalFrame {
         lblID = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
-        MaskFormatter maskCedula  = null;
-
-        try{
-            maskCedula =  new MaskFormatter("###-#######-#");
-            maskCedula.setPlaceholder(" ");
-
-        }catch(Exception e) {
-            System.out.println("Error en el campo Cedula");
-            System.out.println(e.toString());
-        }
-        txtCedula = new javax.swing.JFormattedTextField(maskCedula);
+        txtCedula = new javax.swing.JFormattedTextField();
         MaskFormatter maskCedula2  = null;
 
         try{
@@ -469,7 +459,7 @@ public class AdministrarUsuarios extends javax.swing.JInternalFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

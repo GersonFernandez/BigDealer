@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="3">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="4">
+        <file>
+            <url>src/vehiculo/Vehiculos.java</url>
+            <bookmark id="4">
+                <name/>
+                <line>795</line>
+                <key/>
+            </bookmark>
+        </file>
         <file>
             <url>src/Utiliti/Lib.java</url>
             <bookmark id="1">
                 <name/>
-                <line>390</line>
+                <line>468</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/datosClientes.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/Utiliti/Lib.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/Login.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/Facturas.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/vehiculo/Vehiculos.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/AdministrarUsuarios.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/AgregarClientes.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/Connection/conectar.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/Utiliti/Valida.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/vehiculo/Inventario.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/vehiculo/AgregarTipoCarroceria.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/vehiculo/EntradaVehiculo.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/HistorrialFactura.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/BigDealer/src/MantenimientoADMIN.java</file>
         </group>
     </open-files>

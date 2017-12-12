@@ -202,6 +202,44 @@ public class Lib {
         }
         return model;
      }    
+    public static DefaultTableModel tblCargarInventarioVehiculos(DefaultTableModel model,ResultSet rs){
+
+        try {
+            if(rs.next()){
+                try {
+                    
+                    rs.beforeFirst();
+                    ResultSetMetaData rsmd = rs.getMetaData();
+                    int cant_colum = rsmd.getColumnCount();
+                    /*
+                    for(int i = 1;i < cant_colum;i++){
+                    model.addColumn(rsmd.getColumnLabel(i));
+                    }
+                    */
+                    while(rs.next()){
+                        String[] fila = new String[cant_colum];
+                        for(int i = 0;i < cant_colum; i++){
+                            
+                            if(i == 4){
+                                fila[i] = rs.getString(i+1).substring(0, 4);
+                            }else{
+                                fila[i] = rs.getString(i+1);
+                            }
+                        }
+                        model.addRow(fila);
+                    }
+                    rs.close();
+                    
+                }catch(SQLException esql){
+                    System.err.print("Error SQL: "+esql.getMessage());
+                }
+            }
+            
+        } catch (SQLException ex) {
+            System.err.print("Error SQL: "+ex.getMessage());;
+        }
+        return model;
+     }    
     public static ResultSet queryArray(String select,String from){
      ResultSet rs = null;
         try {
@@ -226,7 +264,7 @@ public class Lib {
             Connection conn = co.conexion();
             Statement st = conn.createStatement();
             rs = st.executeQuery("SELECT "+ select +" FROM "+ from + " ORDER BY "+orden);
-            //System.out.println("SELECT "+ select +" FROM "+ from);
+            System.out.println("SELECT "+ select +" FROM "+ from);
 
 
         } catch (SQLException ex) {
